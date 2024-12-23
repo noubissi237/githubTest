@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontaktformular</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #0077cc;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, textarea, button {
+            font-size: 16px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        input:focus, textarea:focus {
+            border-color: #0077cc;
+            outline: none;
+        }
+        button {
+            background-color: #0077cc;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #005fa3;
+        }
+        .success-message {
+            color: green;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kontaktieren Sie uns</h1>
+        <form action="#" method="POST" onsubmit="handleFormSubmission(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Dein Name" required>
+
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" name="email" placeholder="Deine E-Mail-Adresse" required>
+
+            <label for="subject">Betreff:</label>
+            <input type="text" id="subject" name="subject" placeholder="Worum geht es?" required>
+
+            <label for="message">Nachricht:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Deine Nachricht" required></textarea>
+
+            <button type="submit">Absenden</button>
+        </form>
+        <div class="success-message" id="successMessage" style="display: none;">
+            Vielen Dank für Ihre Nachricht! Wir melden uns so bald wie möglich.
+        </div>
+    </div>
+
+    <script>
+        function handleFormSubmission(event) {
+            event.preventDefault();
+            document.getElementById('successMessage').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('successMessage').style.display = 'none';
+            }, 5000);
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>

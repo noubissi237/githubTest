@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Dancing+Script:wght@400..700&display=swap');
+
+* {
+    box-sizing: border-box;
+  }
+
+  .fleche{
+    /* font-size: 40px; */
+    font-size: 40px;
+    transform: rotate(45deg);
+ }
+  
+  .navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+  }
+  
+  .nav-branding {
+    font-size: 2rem;
+  }
+  
+  .hamburger {
+    display: block; /* Hamburger menu visible par défaut */
+    cursor: pointer;
+  }
+  
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    left: -100%; /* Menu masqué par défaut */
+    top: 70px;
+    flex-direction: column; /* Stacking des items verticalement */
+    background-color: #ecc083;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s ease;
+  }
+  
+  .nav-item {
+    margin: 16px 0;
+  }
+  
+  .nav-link {
+    transition: 0.7s ease;
+  }
+  
+  .nav-link:hover {
+    color: dodgerblue;
+  }
+  
+  .nav-menu.active {
+    left: 0; /* Affiche le menu lorsqu'il est actif */
+  }
+
+  /*_________mon code debut__________*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    transition: all 0.3s ease 0s;
+}
+
+
+/*Disposition du site*/
+
+/* Styles de base pour appareils mobiles */
+body {
+    font-size: 14px;
+    background-color: #f9fafb;
+    font-family: 'Cabin', 'montserrat', 'Times New Roman', Times, serif;
+    display: grid;
+    grid-template-rows: 120px 1fr 120px;
+    /* En-tête, contenu principal, pied de page */
+    grid-template-columns: 1fr;
+    /* Une seule colonne */
+    /* height: 100vh; */
+    /* La grille occupe toute la hauteur de l'écran */
+
+    background-image: linear-gradient(to bottom, #ffb347, #e3f1f7);
+}
+
+header {
+    background-color: #ecc083;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #ffb247c8;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #302902;
+}
+
+video {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
+    justify-content: center;
+    border: 1px solid #302902;
+}
+
+img {
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    border: 1px solid #302902;
+}
+
+/*Autres elements !!!!!!!!!*/
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.btn {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: lighter;
+    color: #333;
+    padding: 1vw;
+    background: #ffb347;
+    outline: none;
+    cursor: pointer;
+    border-radius: 60px;
+    position: relative;
+    border: 1px solid #302902;
+    transition: all 0.3s ease 0s;
+}
+
+.btn:hover {
+    background-color: #29233fae;
+    font-size: 0.9rem;
+}
+
+/* tous les liens*/
+a {
+    text-decoration: none;
+    /*font-weight: bold;*/
+}
+
+a:hover {
+    text-decoration: wavy;
+
+}
+
+#faq {
+    font-family: Arial, sans-serif;
+    max-width: 100%;
+}
+
+details {
+    border: 1px solid #302902;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #eecea1;
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+details[open] summary {
+    color: #302902;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    background-color: #fffce97d;
+    border-radius: 10px;
+    font-family: "Dancing Script", 'montserrat', 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: #fffce97d;
+    border-radius: 10px;
+    font-family: "Dancing Script", 'montserrat', 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1rem;
+    text-align: center;
+    background-color: #fffce97d;
+    border-radius: 10px;
+    font-family: "Dancing Script", 'montserrat', 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+#scrollToTop {
+    transform: rotate(-126deg);
+    position: fixed;
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    bottom: 20px;
+    right: 15px;
+    color: black;
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+    z-index: 3;
+
+    background-color: #eecea1;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+
+#scrollToTop:hover {
+    /* background-color: #f7f7f7; */
+    /* color: #000; */
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+
+}
+/*____mon code fin_____*/
+  
+  /* Styles pour les grands écrans */
+  @media (min-width: 768px) {
+    .hamburger {
+      display: none; /* Cache le menu hamburger */
+    }
+  
+    .nav-menu {
+      position: static; /* Menu en ligne pour les écrans larges */
+      display: flex;
+      flex-direction: row; /* Items disposés horizontalement */
+      align-items: center;
+      gap: 60px;
+      background-color: transparent; /* Pas de fond */
+      width: auto;
+    }
+  
+    .nav-item {
+      margin: 0; /* Supprime les marges pour le layout horizontal */
+    }
+
+    /*_________mon code debut__________*/
+
+    body {
+        font-size: 16px;
+        grid-template-columns: 20% minmax(200px, 1fr) 20%;
+        grid-template-rows: 120px 1fr 120px;
+        grid-template-areas:
+            'header header header'
+            'aside1 body aside2'
+            'footer footer footer';
+    }
+
+    header {
+        grid-area: header;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+    }
+
+    main {
+        grid-area: body;
+        text-align: justify;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+
+    #scrollToTop {
+        width: 50px;
+        height: 50px;
+        bottom: 30px;
+        right: 30px;
+        line-height: 50px;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.5s ease 0s;
+    }
+
+    #scrollToTop:hover {
+        /* background-color: #f7f7f7; */
+        /* color: #000; */
+        width: 60px;
+        height: 60px;
+        line-height: 50px;
+    }
+
+    /*__________mon code fin ____________*/
+  }
+  /*barre de recherche*/
